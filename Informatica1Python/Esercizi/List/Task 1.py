@@ -47,6 +47,8 @@ Calculate how much each person needs to pay or save to balance expenses
 Print the results to see who needs to contribute more and who can expect some savings
 """
 
-
 lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
+lista_even = filter(lambda x: x % 2 == 0, lista)
+
+print(list(lista_even))
