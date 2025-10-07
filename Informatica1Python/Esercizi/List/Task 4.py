@@ -37,6 +37,31 @@ print(f"banana is in the list of words: {a}")
 
 append_list = lista
 
-append_list.append("new item")
+append_list.append("new")
 
 print(f"New item append: {append_list}")
+
+b = len(lista[0])
+
+print(b)
+
+shortest = len(lista[0])
+shortest_word = lista[0]
+
+for i in range(len(lista)):
+    if len(lista[i]) <= shortest:
+        shortest_word = lista[i]
+
+
+print(f"shortest word: {shortest_word}")
+
+
+longest = len(lista[0])
+longest_word = lista[0]
+
+for i in range(len(lista)):
+    if len(lista[i]) >= shortest:
+        longest_word = lista[i]
+
+
+print(f"longest word: {longest_word}")
