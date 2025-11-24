@@ -57,14 +57,14 @@ def produtto_matrice (matrice1, matrice2):
     aux_produtto_func = 0
     aux_aux_func = 0
 
-    for f in range(len(matrice2) - 1):
-        for l in range(len(matrice2) - 1):
-            for x in range(len(matrice1) + 1):
-                aux_aux_func = A[f][x] * B[x][l]
+    for f in range(len(matrice1)):
+        for l in range(len(matrice2[0])):
+            for x in range(len(matrice2)):
+                aux_aux_func = matrice1[f][x] * matrice2[x][l]
                 aux_produtto_func = aux_aux_func + aux_produtto_func
             matrix_produtto_func = np.append(matrix_produtto_func, aux_produtto_func)
             aux_produtto_func = 0
-    matrix_produtto_func = matrix_produtto_func.reshape(2, 2)
+    matrix_produtto_func = matrix_produtto_func.reshape(len(matrice1), len(matrice2[0]))
 
     return matrix_produtto_func
 
@@ -85,7 +85,7 @@ B1 = np.array([
 ])
 
 AB = produtto_matrice(A1, B1)
-print("Exemplo 1:\n", AB, "\n")
+print("\nExemplo 1:\n", AB, "\n")
 
 
 A2 = np.array([
