@@ -57,6 +57,8 @@ print("\nSomma Matrice Numpy:\n", SumNumpy)
 print("\nSomma Matrice Numpy Dimensione Diversi:\n", SumNumpy1)
 
 
+
+#Calcolare con due soli cicli for la somma degli elementi che hanno indice della riga pari e indice della colonna dispari
 SumPari = 0
 SumDispari = 0
 

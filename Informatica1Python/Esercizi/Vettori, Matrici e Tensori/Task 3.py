@@ -55,7 +55,6 @@ print(matrix_produtto)
 def produtto_matrice (matrice1, matrice2):
     matrix_produtto_func = np.array([])
     aux_produtto_func = 0
-    aux_aux_func = 0
 
     for f in range(len(matrice1)):
         for l in range(len(matrice2[0])):
