@@ -19,7 +19,6 @@ Convertire in float per poter avere i valori corretti. la sintassi è: variabile
 """
 
 import numpy as np
-from numpy.ma.core import reshape
 
 l = [1,2,3,4]
 matrice = np.array([l,l,l,l])
@@ -41,6 +40,45 @@ print("La matrice adesso é un cubo:\n",cubo)
 
 
 print("\nDimensione matrice:\n",matrice.shape, "\nDimensione cubo:\n", cubo.shape)
+
+
+matrici = np.random.randint(1, 4, (3, 2))
+
+print("\nMatrice Nova:\n",matrici)
+
+matrici_composta = np.array([])
+
+matrici_compostaA = matrici.T #Possiamo fare cosi anche
+
+
+for i in range(len(matrici[0])):
+    for j in range(len(matrici)):
+        matrici_composta = np.append(matrici_composta,matrici[j][i])
+
+
+print("\nMatrice Transposta:\n", matrici_compostaA)
+
+
+
+print("\nMatrice Resize:\n", matrice)
+
+def add_riga(m):
+    mt = np.array([
+        [1],
+        [1],
+        [1],
+        [1],
+    ])
+    m = np.column_stack((m, mt)) #come un shift a destra (non é come un shift hahaha :\ )
+
+    #possiamo fare anche a sinistra m = np.column_stack((mt, m)) l'inverso oppure np.hstack((mt, m)) sarebbe la stessa cosa
+
+    return m
+
+
+testi = add_riga(matrice)
+print("\nMatrice 4X5:\n", testi)
+print("\nShape\n", testi.shape)
 
 
 
